@@ -1,7 +1,7 @@
 const routes = [
     {
-        id: "Store",
-        route: "/shop",
+        id: "Application Advising",
+        route: "/App",
         routePath: [
             {
                 path: "/shop/mac",
@@ -28,7 +28,7 @@ const routes = [
         ]
     },
     {
-        id: "Mac",
+        id: "Major Advising",
         route: "/mac",
         paths: [
             "/shop/mac",
@@ -56,7 +56,7 @@ const routes = [
         ],
     },
     {
-        id: "Iphone",
+        id: "Course Selection Advise",
         route: "/iphone",
         paths: [
             "/shop/mac",
@@ -85,7 +85,7 @@ const routes = [
         
     },
     {
-        id: "Store",
+        id: "Additional Resources",
         route: "/shop",
         paths: [
             "/shop/mac",
