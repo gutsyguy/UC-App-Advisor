@@ -70,7 +70,7 @@ const Waitlist = () => {
               id="email"
             />
             <button
-              className="text-white py-2 mt-4 bg-gray-700 font-medium rounded-md px-8 border-[#D8A206] border-2 border-solid"
+              className="text-white py-2 mt-4 w-full bg-gray-700 font-medium rounded-md px-8 border-[#D8A206] border-2 border-solid"
               type="submit"
             >
               Submit
