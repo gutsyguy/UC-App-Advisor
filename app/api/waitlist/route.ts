@@ -1,20 +1,18 @@
+// app/api/waitlist/route.ts
+
 import Airtable from 'airtable';
-import {NextRequest, NextResponse} from 'next/server'
+import { NextRequest, NextResponse } from 'next/server';
 
+const base = new Airtable({ apiKey: process.env.api_key }).base(`${process.env.base_id_key}`);
 
-const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base("appVDDauiNUxWdkYo");
+export async function POST(req: NextRequest) {
+  try {
+    const { email } = await req.json();
 
-export default async function handler(req: any, res: any) {
-  if (req.method === 'POST') {
-    const { email } = req.body;
+    const record = await base('Emails').create([{ fields: { Email: email } }]);
 
-    try {
-      const record = await base('Emails').create([{ email }]);
-      res.status(200).json({ record });
-    } catch (err:any) {
-      res.status(500).json({ err: err.message });
-    }
-  } else {
-    res.status(405).json({ message: 'Method Not Allowed' });
+    return NextResponse.json({ record }, { status: 200 });
+  } catch (err: any) {
+    return NextResponse.json({ error: err.message }, { status: 500 });
   }
 }

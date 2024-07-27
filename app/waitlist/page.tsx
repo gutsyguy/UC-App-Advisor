@@ -1,45 +1,58 @@
 "use client";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const Waitlist = () => {
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleEmailChange = (e: any) => {
-    let inputValue = e.target.value;
-    setEmail(inputValue);
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
   };
 
-  const sendEmail = async () => {};
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setMessage("Successfully joined the waitlist!");
+      } else {
+        setMessage(`Error: ${result.error}`);
+      }
+    } catch (error) {
+      setMessage("An unexpected error occurred.");
+    }
+  };
 
   return (
     <div
       className="min-h-screen bg-cover bg-no-repeat flex justify-center items-center flex-col bg-center bg-white text-black"
       style={{
         backgroundImage: "url('/background.png')",
-        // filter: "blur(2px)",
-        // backdropFilter: "blur('4x')",
       }}
     >
-      <div
-        style={
-          {
-            //   filter: "blur(-8px)",
-          }
-        }
-      >
+      <div>
         <h1 className="text-center font-bold text-4xl text-[#9a9500] ">
           We know applying to college is scary, <br /> but we can help ease your
           worries a bit
         </h1>
-        <h2>Join our waitlist</h2>
-        <form action="" onSubmit={sendEmail}>
+        <h2 className="text-center mt-4">Join our waitlist</h2>
+        <form onSubmit={sendEmail} className="w-full max-w-md mt-4">
           <div className="w-full flex flex-col my-4">
-            <label htmlFor="email" className="font-bold text-white">
+            <label htmlFor="email" className="font-bold text-black mb-2">
               Email
             </label>
             <input
-              className="border-[#D8A206] text-black border-2 border-solid rounded-md"
+              className="border-[#D8A206] text-black border-2 border-solid rounded-md p-2"
               required
               type="email"
               value={email}
@@ -48,13 +61,14 @@ const Waitlist = () => {
               id="email"
             />
             <button
-              className="text-white py-2 mt-[2rem] bg-gray-700 font-medium rounded-md mb-4 px-[5rem] border-[#D8A206] border-2 border-solid"
+              className="text-white py-2 mt-4 bg-gray-700 font-medium rounded-md mb-4 px-8 border-[#D8A206] border-2 border-solid"
               type="submit"
             >
               Submit
             </button>
           </div>
         </form>
+        {message && <p className="text-center mt-4">{message}</p>}
       </div>
     </div>
   );
