@@ -44,8 +44,7 @@ const Waitlist = () => {
     >
       <div className="w-full max-w-md text-center">
         <h1 className="font-bold text-4xl text-[#9a9500]">
-          We know applying to college is scary, <br /> but we can help ease your
-          worries a bit
+          Ultimate guide to get into the UCs
         </h1>
         <h2 className="mt-4">Join our waitlist</h2>
         <form
