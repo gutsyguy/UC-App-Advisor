@@ -47,7 +47,7 @@ const Waitlist = () => {
         </h1>
         <h2 className="text-center mt-4">Join our waitlist</h2>
         <form onSubmit={sendEmail} className="w-full max-w-md mt-4">
-          <div className="w-full flex flex-col my-4">
+          <div className="w-full flex flex-col justify-center my-4">
             <label htmlFor="email" className="font-bold text-black mb-2">
               Email
             </label>

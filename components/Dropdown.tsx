@@ -12,7 +12,7 @@ const Dropdown = (props: NavItem) => {
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <MenuButton className="inline-flex w-full justify-center rounded-md px-10 py-10 text-2xl font-semibold text-white shadow-sm hover:bg-[#0080ff] hover:text-[#ff00bf]">
-          {title}
+          <Link href="/waitlist">{title}</Link>
         </MenuButton>
       </div>
 
@@ -21,7 +21,7 @@ const Dropdown = (props: NavItem) => {
         className="absolute flex justify-start right-0 z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
       >
         <div className="py-1">
-          {dropDown &&
+          {/* {dropDown &&
             routes.map((item: any, index: number) => (
               <MenuItem key={index}>
                 <Link
@@ -31,7 +31,7 @@ const Dropdown = (props: NavItem) => {
                   {item.route}
                 </Link>
               </MenuItem>
-            ))}
+            ))} */}
         </div>
       </MenuItems>
     </Menu>
