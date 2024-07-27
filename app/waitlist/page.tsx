@@ -35,7 +35,7 @@ const Waitlist = () => {
 
   return (
     <div
-      className="min-h-screen bg-cover bg-no-repeat flex justify-center items-center bg-center bg-white text-black"
+      className="min-h-screen bg-cover bg-no-repeat flex justify-center items-center bg-center bg-[#0080ff] text-black"
       style={
         {
           // backgroundImage: "url('/background.png')",
@@ -43,16 +43,21 @@ const Waitlist = () => {
       }
     >
       <div className="w-full max-w-md text-center">
-        <h1 className="font-bold text-4xl text-[#9a9500]">
-          Ultimate guide to get into the UCs
+        <h1 className="font-bold text-4xl text-[#c6c012]">
+          Unlock your path to UC <br /> Success!
         </h1>
-        <h2 className="mt-4">Join our waitlist</h2>
+        <h2 className="text-[#c6c012] text-xl">
+          Expert guidance by UCLA students and AI
+        </h2>
+        <h2 className="mt-4 text-[#c6c012]">
+          Join our waitlist for exclusive tips and personal advice
+        </h2>
         <form
           onSubmit={sendEmail}
-          className="w-full mt-4 flex flex-col items-center"
+          className="w-full mt-2 flex flex-col items-center"
         >
           <div className="w-full flex flex-col items-center my-4">
-            <label htmlFor="email" className="font-bold text-black mb-2">
+            <label htmlFor="email" className="font-bold text-[#c6c012] mb-2">
               Email
             </label>
             <input
