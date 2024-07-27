@@ -36,9 +36,11 @@ const Waitlist = () => {
   return (
     <div
       className="min-h-screen bg-cover bg-no-repeat flex justify-center items-center bg-center bg-white text-black"
-      style={{
-        backgroundImage: "url('/background.png')",
-      }}
+      style={
+        {
+          // backgroundImage: "url('/background.png')",
+        }
+      }
     >
       <div className="w-full max-w-md text-center">
         <h1 className="font-bold text-4xl text-[#9a9500]">
