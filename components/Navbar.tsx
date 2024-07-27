@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import routes from "@/lib/routes";
-import Dropdown from "./Dropdown";
-import Drop from "./Drop";
+import Dropdown from "./d";
+import Drop from "./Dropdown";
 
 const Navbar = () => {
   return (
