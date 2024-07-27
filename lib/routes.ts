@@ -56,35 +56,6 @@ const routes = [
         ],
     },
     {
-        id: "Course Selection Advise",
-        route: "/iphone",
-        paths: [
-            "/shop/mac",
-            '/shop/ipad',
-            '/shop/iphone',
-        ],
-        routeNames: [
-            "Mac",
-            "Ipad",
-            "Iphone"
-        ],
-        routePath: [
-            {
-                path: "/shop/mac",
-                route: "mac"
-            },
-            {
-                path: "/shop/ipad",
-                route: "ipad"
-            },
-            {
-                path: "/shop/iphone",
-                route: "iphone"
-            }
-        ],
-        
-    },
-    {
         id: "Additional Resources",
         route: "/shop",
         paths: [
