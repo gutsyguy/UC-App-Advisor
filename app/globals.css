@@ -33,23 +33,38 @@ body {
 }
 
 .background {
-
   background: url(https://res.cloudinary.com/mayashavin/image/upload/w_500,f_auto,q_auto/v1597000013/examples/cat_relaxing) no-repeat center;
-
   background-size: cover;
-
   width: 400px;
-
 }
 
 .with-blur-backdrop {
-
   background-color: rgba(255, 255, 255, 0.4);
-
   -webkit-backdrop-filter: blur(5px);
-
   backdrop-filter: blur(5px);
-
   padding: 20px 30px;
+}
 
+.bg-blue-500 {
+  background-color: #0000FF; /* Blue background */
+}
+
+.text-gold {
+  color: #D4AF37; /* Golden text color */
+}
+
+.border-gold {
+  border-color: #D4AF37; /* Golden border color */
+}
+
+.bg-gold {
+  background-color: #D4AF37; /* Golden background for the button */
+}
+
+.hover-bg-gold-dark {
+  transition: background-color 0.3s;
+}
+
+.hover-bg-gold-dark:hover {
+  background-color: #70560e; /* Darker shade of gold */
 }
