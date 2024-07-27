@@ -35,25 +35,28 @@ const Waitlist = () => {
 
   return (
     <div
-      className="min-h-screen bg-blue-500 flex justify-center items-center flex-col text-gold px-4"
+      className="min-h-screen bg-cover bg-no-repeat flex justify-center items-center bg-center bg-white text-black"
+      style={
+        {
+          // backgroundImage: "url('/background.png')",
+        }
+      }
     >
-      <div className="text-center max-w-2xl">
-        <h1 className="font-bold text-5xl mb-4">
-          Unlock Your Path to UC Success!
+      <div className="w-full max-w-md text-center">
+        <h1 className="font-bold text-4xl text-[#9a9500]">
+          Ultimate guide to get into the UCs
         </h1>
-        <h2 className="text-2xl mb-6">
-          Expert Guidance by UCLA Students and AI
-        </h2>
-        <p className="mb-4">
-          Join our waitlist for exclusive tips and personalized advice.
-        </p>
-        <form onSubmit={sendEmail} className="w-full max-w-md mx-auto">
-          <div className="w-full flex flex-col justify-center my-4">
-            <label htmlFor="email" className="font-bold text-lg mb-2">
+        <h2 className="mt-4">Join our waitlist</h2>
+        <form
+          onSubmit={sendEmail}
+          className="w-full mt-4 flex flex-col items-center"
+        >
+          <div className="w-full flex flex-col items-center my-4">
+            <label htmlFor="email" className="font-bold text-black mb-2">
               Email
             </label>
             <input
-              className="border-gold text-black border-2 border-solid rounded-md p-2 mb-4"
+              className="border-[#D8A206] text-black border-2 border-solid rounded-md p-2 w-full"
               required
               type="email"
               value={email}
@@ -62,14 +65,14 @@ const Waitlist = () => {
               id="email"
             />
             <button
-              className="text-black py-2 bg-gold font-medium rounded-md px-8 border-gold border-2 border-solid hover-bg-gold-dark"
+              className="text-white py-2 mt-4 bg-gray-700 font-medium rounded-md px-8 border-[#D8A206] border-2 border-solid"
               type="submit"
             >
               Submit
             </button>
           </div>
         </form>
-        {message && <p className="text-center mt-4 text-lg">{message}</p>}
+        {message && <p className="mt-4">{message}</p>}
       </div>
     </div>
   );
