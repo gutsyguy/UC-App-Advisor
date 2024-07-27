@@ -2,8 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import routes from "@/lib/routes";
-import Dropdown from "./d";
-import Drop from "./Dropdown";
+import Dropdown from "./Dropdown";
 
 const Navbar = () => {
   return (
@@ -12,8 +11,7 @@ const Navbar = () => {
         <Image src={"/logo.png"} width={48} height={48} alt="e" />
         {routes.map((route, index) => (
           <div key={index}>
-            <Drop title={route.id} routes={route.routePath}/>
-            {/* <Dropdown title={route.id} routes={"e"} paths="e" /> */}
+            <Dropdown title={route.id} routes={route.routePath} />
           </div>
         ))}
       </nav>
