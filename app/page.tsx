@@ -12,7 +12,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-white text-black">
+    <main className="flex flex-col items-center justify-center min-h-screen bg-[#0080ff] text-white">
       {!showChat ? (
         <div>
           <h1 className="text-4xl font-bold mb-6">Welcome to UC Success!</h1>
