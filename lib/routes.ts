@@ -1,4 +1,4 @@
-const routes = [
+const routes:any = [
     {
         id: "Application Advising",
         route: "/App",
