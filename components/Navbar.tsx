@@ -9,7 +9,7 @@ const Navbar = () => {
     <div>
       <nav className="px-10 flex justify-evenly bg-[#00bfff] items-center">
         <Image src={"/logo.png"} width={64} height={64} alt="e" />
-        {routes.map((route, index) => (
+        {routes.map((route: any, index: number) => (
           <div key={index}>
             <Dropdown title={route.id} routes={route.routePath} />
           </div>
