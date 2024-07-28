@@ -1,7 +1,7 @@
 const routes = [
     {
         id: "Application Advising",
-        route: "/App",
+        route: "/application",
         routePath: [
             {
                 path: "/shop/mac",
@@ -57,7 +57,7 @@ const routes = [
     },
     {
         id: "Additional Resources",
-        route: "/shop",
+        route: "/resource",
         paths: [
             "/shop/mac",
             '/shop/ipad',
