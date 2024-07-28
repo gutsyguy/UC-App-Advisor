@@ -54,7 +54,7 @@ const Chat = () => {
 
   const renderResponse = () => {
     return (
-      <div className="response">
+      <div className="response text-white">
         {messages.map((m: any, index) => (
           <div
             key={index}
