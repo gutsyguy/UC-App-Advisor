@@ -5,14 +5,14 @@ import { useState } from "react";
 import Link from "next/link";
 
 const Dropdown = (props: NavItem) => {
-  const { title, routes } = props;
+  const { title, route, routes } = props;
   const [dropDown, setDropDown] = useState(true);
 
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <MenuButton className="inline-flex w-full justify-center rounded-md px-10 py-10 text-2xl font-semibold text-white shadow-sm hover:bg-[#0080ff] hover:text-[#ff00bf]">
-          <Link href="/waitlist">{title}</Link>
+          <Link href={route}>{title}</Link>
         </MenuButton>
       </div>
 

@@ -11,7 +11,7 @@ const Navbar = () => {
         <Image src={"/logo.png"} width={64} height={64} alt="e" />
         {routes.map((route, index) => (
           <div key={index}>
-            <Dropdown title={route.id} routes={route.routePath} />
+            <Dropdown title={route.id} route={route.route} routes={route.routePath} />
           </div>
         ))}
       </nav>
